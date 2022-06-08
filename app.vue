@@ -6,13 +6,6 @@
     </div>
 </template>
 
-<script setup>
-onMounted (() => {
-    document.body.classList.add('bg-libadw-bg')
-})
-</script>
-
-
 <style>
     .page-enter-active,
     .page-leave-active {
