@@ -29,7 +29,7 @@
             </section>
 
             <section id="autostart-settings" class="flex flex-row items-center gap-2">
-                <input type="checkbox">
+                <input type="checkbox" v-model="autostartEnabled">
                 <span>Show on startup</span>
             </section>
         </div>
@@ -43,6 +43,15 @@
         
     </main>
 </template>
+
+<script setup>
+const autostartEnabled = ref(true)
+
+watch(autostartEnabled, (newValue) => {
+    console.log(newValue);
+    // add rust invoking logic here to add/remove .desktop file from ~/.config/autostart
+})
+</script>
 
 <style scoped>
 .action-card {
