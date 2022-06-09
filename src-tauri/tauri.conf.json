@@ -56,10 +56,12 @@
         "windows": [
             {
                 "fullscreen": false,
-                "height": 800,
-                "resizable": true,
+                "height": 660,
+                "resizable": false,
                 "title": "Ultramarine Welcome",
-                "width": 1200
+                "width": 1000,
+                "decorations": false,
+                "transparent": true
             }
         ]
     }
