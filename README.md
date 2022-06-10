@@ -1,4 +1,6 @@
-# Nuxt 3 Minimal Starter
+# Ultramarine Welcome App
+![uml_welcome](https://user-images.githubusercontent.com/57040351/173147534-12299632-1f82-43e7-bba0-cd68d1116def.png)
+
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
