@@ -1,5 +1,5 @@
 [package]
-name = "Ultramarine Welcome"
+name = "Ultramarine-Welcome"
 version = "0.1.0"
 description = "Welcome app made for Ultramarine Linux"
 authors = ["Ultramarine Linux Team"]
