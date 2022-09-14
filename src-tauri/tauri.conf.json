@@ -7,7 +7,7 @@
         "distDir": "../.output/public"
     },
     "package": {
-        "productName": "Ultramarine Welcome",
+        "productName": "Welcome to Ultramarine",
         "version": "0.1.0"
     },
     "tauri": {
@@ -29,7 +29,7 @@
                 "icons/icon.icns",
                 "icons/icon.ico"
             ],
-            "identifier": "com.ultramarine.welcome",
+            "identifier": "org.ultramarinelinux.welcome",
             "longDescription": "",
             "macOS": {
                 "entitlements": null,
