@@ -45,7 +45,7 @@
 </template>
 
 <script setup>
-const autostartEnabled = ref(true)
+const autostartEnabled = ref(false)
 
 watch(autostartEnabled, (newValue) => {
     console.log(newValue);
