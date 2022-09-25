@@ -14,12 +14,12 @@
                     </svg>
                     <span>Install Software</span>
                 </nuxt-link>
-                <a href="#" class="action-card">
+                <button class="action-card" @click="showTweaksWipMessage">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                     </svg>
                     <span>Open Tweaks App</span>
-                </a>
+                </button>
                 <a href="https://wiki.ultramarine-linux.org" target="_blank" class="action-card">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
@@ -40,6 +40,12 @@
 </template>
 
 <script setup>
+import { message } from "@tauri-apps/api/dialog";
+
+const showTweaksWipMessage = () => {
+    message("Ultramarine Tweaks is a work in progress and will be coming soon.", {title: "Coming soon"})
+}
+
 </script>
 
 <style scoped>
