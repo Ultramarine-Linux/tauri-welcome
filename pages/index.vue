@@ -4,7 +4,7 @@
             <section id="welcome-text" class="flex flex-col items-center">
                 <img src="@/static/ultramarine-logo.svg" alt="Ultramarine Logo" class="w-36 h-auto my-4" width="144px" height="auto">
                 <h1 class="text-4xl text-transparent bg-clip-text font-bold tracking-tight mb-1 bg-gradient-to-tl from-green-300 via-blue-200 to-purple-500">Welcome to Ultramarine Linux</h1>
-                <p class="mb-8">Welcome to Ultramarine Linux! We hope you enjoy this new experience.</p>
+                <p class="mb-8">Select an option below to get started with your Ultramarine installation's setup.</p>
             </section>
 
             <section id="action-select" class="flex flex-row w-full items-center justify-center gap-8 pb-4">
