@@ -59,9 +59,7 @@
                 "height": 660,
                 "resizable": false,
                 "title": "Ultramarine Welcome",
-                "width": 1000,
-                "decorations": false,
-                "transparent": true
+                "width": 1000
             }
         ]
     }
