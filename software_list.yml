@@ -1,0 +1,240 @@
+extra_copr_repos:
+    - name: nickavem/adw-gtk3
+      description: adw-gtk3 Theme for Fedora
+    - name: sentry/xpadneo
+      description: xpadneo driver for Xbox One S/X Bluetooth controller
+    - name: sentry/polymc
+      description: PolyMC Minecraft launcher
+
+packages:
+    - id: akmod-nvidia
+      name: NVIDIA Kernel Module
+      description: Linux kernel module for NVIDIA graphics cards
+      selected: false
+
+    - id: xorg-x11-drv-nvidia-cuda
+      name: NVIDIA CUDA Driver
+      description: NVIDIA CUDA driver for NVIDIA graphics cards
+      selected: false
+
+    - id: discord
+      name: Discord
+      description: Chat and voice service
+      selected: false
+
+    - id: steam
+      name: Steam
+      description: Launcher for the Steam gaming platform
+      selected: false
+
+    - id: lutris
+      name: Lutris
+      description: Game manager for Linux
+      selected: false
+
+    - id: wine
+      name: Wine
+      description: Windows compatibility layer for Linux
+      selected: false
+
+    - id: realtime-setup
+      name: Linux Real-time configuration
+      description: Configurations for real-time Linux workflows
+      selected: false
+
+    - id: VirtualBox
+      name: VirtualBox
+      description: Virtualization software
+      selected: false
+
+    - id: virtualbox-guest-additions
+      name: VirtualBox Guest Additions
+      description: VirtualBox Guest Additions for Linux
+      selected: false
+
+    - id: libvirt
+      name: libvirt
+      description: Hypervisor management library
+      selected: false
+
+    - id: qemu-kvm
+      name: QEMU-KVM
+      description: QEMU emulator, with support for KVM
+      selected: false
+
+    - id: gnome-boxes
+      name: GNOME Boxes
+      description: libvirt frontend for GNOME
+      selected: false
+
+    - id: virt-manager
+      name: virt-manager
+      description: Virtual machine manager
+      selected: false
+
+    - id: gnome-tweaks
+      name: GNOME Tweaks
+      description: App for editing advanced GNOME settings
+      selected: false
+
+    - id: gnome-shell-extension-dash-to-dock
+      name: GNOME Shell Extension - Dash to Dock
+      description: GNOME Shell extension that replaces the GNOME dash to a dock
+      selected: false
+
+    - id: gnome-extensions-app
+      name: GNOME Extensions
+      description: App for managing GNOME extensions
+      selected: false
+
+    - id: moby-engine
+      name: Docker (Moby Engine)
+      description: Open-source distribution of Docker
+      selected: false
+      conflicts:
+          - podman-docker
+
+    - id: podman
+      name: Podman
+      description: Tool for managing OCI containers and pods, can be used as a drop-in replacement for Docker
+      selected: false
+
+    - id: podman-docker
+      name: Podman-Docker compatibility shim
+      description: Compatibility shim for Podman to be used as a replacement for Docker
+      selected: false
+      conflicts:
+          - moby-engine
+
+    - id: docker-compose
+      name: Docker Compose (v1)
+      description: Tool for defining and running multi-container Docker applications. It is recommended you use Docker Compose V2 (docker compose) instead of this package.
+      selected: false
+
+    - id: "@development-tools"
+      name: Development Tools (Metapackage)
+      description: Common tools for development
+      selected: false
+
+    - id: code
+      name: Visual Studio Code
+      description: Code editor by Microsoft
+      selected: false
+      pre_script:
+          - pkexec rpm --import https://packages.microsoft.com/keys/microsoft.asc
+          - pkexec sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+
+    - id: codium
+      name: VSCodium
+      description: Open-source distribution of Visual Studio Code
+      selected: false
+
+    - id: umpkg
+      name: Ultramarine Packager Tool
+      description: Tool for packaging software for Ultramarine
+      selected: false
+
+    - id: rust
+      name: Rust
+      description: Rust programming language
+      selected: false
+
+    - id: cargo
+      name: Cargo
+      description: Rust package manager
+      selected: false
+
+    - id: com.usebottles.bottles
+      name: Bottles
+      description: Wine manager for Linux
+      selected: false
+      flatpak: true
+
+    - id: com.github.tchx84.Flatseal
+      name: Flatseal
+      description: Flatpak permissions manager
+      selected: false
+      flatpak: true
+
+    - id: com.github.wwmm.easyeffects
+      name: EasyEffects
+      description: Audio effects manager for PipeWire
+      selected: false
+      flatpak: true
+
+    - id: polymc
+      name: PolyMC
+      description: Minecraft launcher
+      selected: false
+      copr: sentry/polymc
+
+    - id: xpadneo
+      name: xpadneo
+      description: Xbox One S/X Bluetooth controller driver
+      selected: false
+      copr: sentry/xpadneo
+
+    - id: com.obsproject.Studio
+      name: OBS Studio
+      description: Open-source streaming and recording software
+      selected: false
+      flatpak: true
+
+
+groups:
+    - id: gaming
+      name: Gaming
+      description: Common packages for gaming
+      packages:
+          - discord
+          - steam
+          - lutris
+          - com.usebottles.bottles
+          - xpadneo
+
+    - id: virtualization
+      name: Virtualization
+      description: Common packages for virtualization
+      packages:
+          - VirtualBox
+          - libvirt
+          - qemu-kvm
+          - virt-manager
+
+    - id: rust-devel
+      name: Rust Development
+      description: Packages for Rust development
+      packages:
+          - rust
+          - cargo
+
+presets:
+    - id: gaming
+      name: Gaming
+      description: Gaming preset
+      groups:
+          - gaming
+
+    - id: rust-development
+      name: Rust Development
+      description: A preset to quickly get started with Rust development
+      groups:
+          - rust-devel
+      packages:
+          - "@development-tools"
+
+    - id: development
+      name: Development
+      description: Common packages for development
+      packages:
+          - "@development-tools"
+          - code
+          - umpkg
+
+
+    - id: nvidia-support
+      name: NVIDIA GPU Support
+      description: Support for NVIDIA graphics cards
+      packages:
+          - akmod-nvidia
+          - xorg-x11-drv-nvidia-cuda

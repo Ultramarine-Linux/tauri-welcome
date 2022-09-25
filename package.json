@@ -7,6 +7,7 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@modyfi/vite-plugin-yaml": "^1.0.3",
     "@nuxtjs/tailwindcss": "^5.3.3",
     "@tauri-apps/cli": "^1.1.1",
     "nuxt": "3.0.0-rc.11"
@@ -17,5 +18,5 @@
   "resolutions": {
     "terser": "^5.15.0",
     "undici": "^5.8.2"
- }
+  }
 }
