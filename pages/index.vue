@@ -1,12 +1,12 @@
 <template>
-    <main class="min-h-screen w-full h-full bg-libadw-bg text-white flex flex-col items-center justify-between px-8">
+    <main class="min-h-screen w-full h-full bg-gray-900 text-white flex flex-col items-center justify-between px-8">
         <div class="flex flex-col items-center mt-[45px]">
             <section id="welcome-text" class="flex flex-col items-center">
                 <img src="@/static/ultramarine-logo.svg" alt="Ultramarine Logo" class="w-36 h-auto my-4" width="144px" height="auto">
-                <h1 class="text-4xl font-semibold tracking-tight mb-1">Welcome to Ultramarine Linux</h1>
+                <h1 class="text-4xl text-transparent bg-clip-text font-bold tracking-tight mb-1 bg-gradient-to-tl from-green-300 via-blue-200 to-purple-500">Welcome to Ultramarine Linux</h1>
                 <p class="mb-8">Welcome to Ultramarine Linux! We hope you enjoy this new experience.</p>
             </section>
-            
+
             <section id="action-select" class="flex flex-row w-full items-center justify-center gap-8 pb-4">
                 <nuxt-link to="/pkg-install" class="action-card">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -55,10 +55,10 @@ watch(autostartEnabled, (newValue) => {
 
 <style scoped>
 .action-card {
-    @apply flex flex-col items-center justify-center w-56 p-4 font-bold text-lg bg-libadw-btn hover:bg-libadw-btn-hover rounded-md
+    @apply flex flex-col items-center justify-center w-56 p-4 font-bold text-lg bg-gray-800 hover:bg-gray-700 rounded-md
 }
 
 #links a{
-    @apply hover:text-blue-500
+    @apply hover:text-blue-200
 }
 </style>
