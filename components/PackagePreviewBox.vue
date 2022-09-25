@@ -9,11 +9,11 @@
 export default {
     props: {
         packageName: {
-            type: Text,
+            type: String,
             required: true
         },
         description: {
-            type: Text,
+            type: String,
             required: true
         }
     }
