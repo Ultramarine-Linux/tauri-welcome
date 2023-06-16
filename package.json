@@ -1,17 +1,20 @@
 {
+  "name": "nuxt-app",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^5.3.3",
-    "@tauri-apps/cli": "^1.1.1",
-    "nuxt": "3.0.0-rc.9"
+    "@nuxt/devtools": "latest",
+    "@tauri-apps/cli": "^1.4.0",
+    "@types/node": "^18",
+    "nuxt": "^3.5.2"
   },
   "dependencies": {
-    "@tauri-apps/api": "^1.1.0"
+    "primevue": "^3.29.2"
   }
 }
