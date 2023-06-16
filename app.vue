@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
   <div class="main">
     <Button label="test"></Button>
@@ -15,3 +16,10 @@
     height: 100vh;
   }
 </style>
+=======
+<template>
+    <NuxtLayout>
+        <NuxtPage/>
+    </NuxtLayout>
+</template>
+>>>>>>> ec347dad4f24ccdd7d235c2e12d6c7a0e8f6584d
